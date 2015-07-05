@@ -14,7 +14,10 @@ var pickFiles = require('broccoli-static-compiler'),
       outputFile: '/build/main.js'
     }),
 
-    jsTree = uglify(jsConcat, {compress: true}),
+    jsTree = uglify(jsConcat, {
+      compress: true,
+      mangle: true
+    }),
 
     sassTree = compileSass(['site/scss', 'vendor/css', 'site/fontello/css', 'node_modules/normalize.css'], 'main.scss', 'build/main.css'),
 
@@ -24,6 +27,8 @@ var pickFiles = require('broccoli-static-compiler'),
       destDir: '/font'
     }),
 
-    siteTree = funnel('site');
+    siteTree = funnel('site'),
 
-module.exports = mergeTrees([jsTree, sassTree, fontTree, siteTree]);
+    trees = [sassTree, fontTree, siteTree, process.argv[2] === 'build' && process.argv[3] ? jsTree : jsConcat];
+
+module.exports = mergeTrees(trees);

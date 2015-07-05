@@ -1,3 +1,10 @@
+%wrap-gutter {
+  padding: {
+    top: 8em;
+    bottom: 8em;
+  };
+}
+
 .banner {
   h1 {
     font-size: 5rem;
@@ -45,11 +52,15 @@
   img {
     width: auto;
   }
+
+  p {
+    font-size: 3rem;
+    line-height: 4.8rem;
+  }
 }
 
 .thumbnail-slider {
   li {
-    margin: 0 3rem 0 0;
     cursor: pointer;
   }
 
@@ -83,6 +94,18 @@
       position: absolute;
       left: -9999px;
     }
+  }
+}
+
+.details {
+  .details-header {
+    padding-bottom: 5rem;
+  }
+}
+
+.owner {
+  iframe {
+    padding-bottom: 0;
   }
 }
 

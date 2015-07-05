@@ -239,10 +239,14 @@
     <section class="owner vcard" id="contact-owner">
       <div class="container vcard">
         <div class="eight columns">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.3080268924587!2d-75.451703!3d43.224001099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d913ec0fffe821%3A0xf8a908e9cd64a88f!2s1005+N+George+St%2C+Rome%2C+NY+13440!5e0!3m2!1sen!2sus!4v1436115955267" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div id="map"
+            data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.3080268924587!2d-75.451703!3d43.224001099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d913ec0fffe821%3A0xf8a908e9cd64a88f!2s1005+N+George+St%2C+Rome%2C+NY+13440!5e0!3m2!1sen!2sus!4v1436115955267"
+            data-iframe-height="600"
+            data-iframe-width="450"
+          ></div>
         </div>
 
-        <div class="four columns owner-info">
+        <div class="four columns u-pull-right owner-info">
           <h2 class="owner-title">Contact Owner</h2>
           <i class="icon-location" aria-hidden="true"></i>
           <div class="addr">
@@ -275,6 +279,13 @@
       </div>
     </footer>
 
-    <script src="build/main.js"></script>
+    <script>
+      (function() {
+        var script = document.createElement('script');
+        script.src = 'build/main.js';
+        script.async = true;
+        document.body.appendChild(script);
+      }());
+    </script>
   </body>
 </html>

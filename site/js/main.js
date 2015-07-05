@@ -65,11 +65,25 @@
     });
   }
 
+  function loadGoogleMap() {
+    var mapEl = document.getElementById('map'),
+        iframe = document.createElement('iframe');
+
+    iframe.frameborder = 0;
+    iframe.allowfullscreen = true;
+    iframe.src = mapEl.getAttribute('data-iframe-src');
+    iframe.width = mapEl.getAttribute('data-iframe-width');
+    iframe.height = mapEl.getAttribute('data-iframe-height');
+    iframe.setAttribute('style', 'border: 0;');
+    mapEl.appendChild(iframe);
+  }
+
   $(window).load(function() {
     removeJsBodyClassName();
     startSlideShows();
     scrollToOwnerSection();
     scrollToTop();
+    loadGoogleMap();
   });
 }(jQuery));
 

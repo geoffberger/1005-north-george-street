@@ -1,0 +1,8 @@
+
+.icon-home-1:before { content: '\21'; } /* '!' */
+.icon-left-open-big:before { content: '\22'; } /* '&quot;' */
+.icon-right-open-big:before { content: '\23'; } /* '#' */
+.icon-up-open-big:before { content: '\24'; } /* '$' */
+.icon-location:before { content: '\2a'; } /* '*' */
+.icon-phone:before { content: '\2b'; } /* '+' */
+.icon-email:before { content: '\5d'; } /* ']' */

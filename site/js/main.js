@@ -4,6 +4,20 @@
 
   var $dom = $('html, body');
 
+  function isMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent)) {
+      return true;
+    }
+  }
+
+  function replaceTelephone() {
+    if (isMobile()) {
+      var $homeTel = $('#home-tel');
+      var telNumber = $('<div/>').text($homeTel.data('tel-number')).text();
+      $homeTel.wrapInner('<a href="tel:' + telNumber + '"/>');
+    }
+  }
+
   function removeJsBodyClassName() {
     $(document.body).removeClass('js');
   }
@@ -79,6 +93,7 @@
   }
 
   $(window).load(function() {
+    replaceTelephone();
     removeJsBodyClassName();
     startSlideShows();
     scrollToOwnerSection();

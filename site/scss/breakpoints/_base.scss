@@ -163,12 +163,7 @@ body {
   @extend %wrap-gutter;
 
   .owner-title {
-    color: $dark-blue-accent;
-    text-transform: uppercase;
-    font: {
-      size: 3rem;
-      family: $header-font;
-    }
+    @extend %subheader;
   }
 
   iframe {
@@ -196,6 +191,10 @@ body {
   .email {
     display: block;
     margin-left: 3rem;
+  }
+
+  .tel a {
+    display: block;
   }
 
   .street-address {
@@ -258,14 +257,10 @@ body {
   }
 
   p {
+    @extend %subheader;
+    font-size: 2rem;
     text-align: center;
-    color: $dark-blue-accent;
     line-height: 2.3rem;
-    font: {
-      size: 2rem;
-      family: $header-font;
-      weight: bold;
-    }
   }
 }
 

@@ -1,5 +1,5 @@
 body {
-  color: $text-color;
+  color: $system-gray;
 }
 
 .js {
@@ -28,7 +28,7 @@ body {
   text-transform: uppercase;
 
   .title {
-    color: #3d5368;
+    color: $dark-blue-accent;
     margin-bottom: .8rem;
     font: {
       size: 2rem;
@@ -38,7 +38,7 @@ body {
   }
 
   .utility {
-    color: #65d3e3;
+    color: $turquoise-accent;
     font: {
       size: 1.5rem;
       weight: bold;
@@ -52,7 +52,7 @@ body {
   background: url('../img/banner.jpg');
   background-size: cover;
   padding: 4rem 0;
-  color: #fff;
+  color: $white;
   text-align: center;
 
   &::after {
@@ -96,21 +96,21 @@ body {
   }
 
   .home {
-    background: #f6f8f9;
-    color: $header-color;
+    background: $gray-shade;
+    color: $dark-blue-accent;
     padding: 1rem;
     font-size: 3rem;
     border-radius: 50%;
   }
 
   .secondary {
-    color: #3d5368;
+    color: $dark-blue-accent;
     font-size: 2rem;
     margin: 2rem 0;
   }
 
   .primary {
-    color: #65d3e3;
+    color: $turquoise-accent;
     font-size: 4rem;
   }
 
@@ -138,12 +138,11 @@ body {
 }
 
 .owner {
-  background: #f6f8f9;
-  color: #6b7281;
+  background: $gray-shade;
   padding: 4rem;
 
   .owner-title {
-    color: $header-color;
+    color: $dark-blue-accent;
     text-transform: uppercase;
     font: {
       size: 3rem;
@@ -168,7 +167,7 @@ body {
   }
 
   .icon-location {
-    color: #65d3e3;
+    color: $turquoise-accent;
   }
 
   .addr,
@@ -193,14 +192,14 @@ body {
   }
 
   a {
-    color: $text-color;
+    color: $system-gray;
     text-decoration: none;
   }
 }
 
 .footer-main {
   text-align: center;
-  background: #3d5368;
+  background: $dark-blue-accent;
   padding: 4rem 0;
 
   .copyright {
@@ -210,7 +209,7 @@ body {
   .back-top {
     background: #475c70;
     padding: 1rem;
-    color: $text-color;
+    color: $system-gray;
     border-radius: 50%;
     font-size: 1.7rem;
 
@@ -227,7 +226,7 @@ body {
 }
 
 .home-preview {
-  background: #f6f8f9;
+  background: $gray-shade;
   padding: 11rem 0;
 }
 
@@ -251,7 +250,7 @@ body {
   }
 
   .flex-active-slide img {
-    border-color: #65D3E3;
+    border-color: $turquoise-accent;
   }
 
   .flex-direction-nav {

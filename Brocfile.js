@@ -19,7 +19,10 @@ var pickFiles = require('broccoli-static-compiler'),
       mangle: true
     }),
 
-    sassTree = compileSass(['site/scss', 'vendor/css', 'site/fontello/css', 'node_modules/normalize.css'], 'main.scss', 'build/main.css'),
+    sassTree = compileSass(['site/scss', 'vendor/css', 'site/fontello/css', 'node_modules/normalize.css'], 'main.scss', 'build/main.css', {
+      outputStyle: 'compressed',
+      sourceComments: false
+    }),
 
     fontTree = pickFiles('site/fontello/font', {
       srcDir: '/',
@@ -27,7 +30,9 @@ var pickFiles = require('broccoli-static-compiler'),
       destDir: '/font'
     }),
 
-    siteTree = funnel('site'),
+    siteTree = funnel('site', {
+      include: ['index.html', /^img/]
+    }),
 
     trees = [sassTree, fontTree, siteTree, process.argv[2] === 'build' && process.argv[3] ? jsTree : jsConcat];
 
